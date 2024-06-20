@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>InstiOLX-Sell in hassle free way</title>
+            <link rel="stylesheet" href="olx_sell.css">
+    </head>
+    <body>
+        <header>
+            <div id="logo">InstiOLX</div>
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="#">Categories</a>
+                <a href="#" style="background:linear-gradient(45deg,green,rgb(8, 242, 35),rgb(197, 244, 10));text-align:center;border-radius:40px;">Sell</a>
+            </div>
+        </header>
+            <form id="sellForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+    
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+    
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+    
+                <label for="buyingDate">Buying Date:</label>
+                <input type="date" id="buyingDate" name="buyingDate" required>
+    
+                <label for="buyingPrice">Buying Price:</label>
+                <input type="number" id="buyingPrice" name="buyingPrice" required>
+    
+                <label for="photos">Upload Photos:</label>
+                <input type="file" id="photos" name="photos" multiple accept="image/*">
+                <div id="photoPreview" class="photo-preview"></div>
+    
+                <label for="details">Your Details:</label>
+                <textarea id="details" name="details" rows="2" required></textarea>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"  pattern="[0-9]{10}" maxlength="10" required>
+                <span class="error-message" id="phoneError">Phone number must be exactly 10 digits long.</span>
+
+    
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+    
+                <button type="submit">Post</button>
+            </form>  
+    </body>
+</html>

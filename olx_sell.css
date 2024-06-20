@@ -1,0 +1,124 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f89245;
+    color: #333;
+}
+
+header {
+    background-color: #1c1ccf;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+header a {
+    color:bisque;
+    text-decoration : None;
+
+}
+
+header a:hover {
+    color:rgb(238, 164, 74);
+    text-decoration : underline;
+
+}
+
+#photoPreview {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-preview-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-preview-item .remove-photo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.photo-preview-item:hover .remove-photo {
+    display: block;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+
+.photo-preview img{
+    width:50%;
+    height:50%;
+    object-fit:cover;
+}
+
+input:invalid ~ .error-message {
+    display: block;
+}
+
+input[type="file"]:focus + .photo-preview {
+    display: block;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1em;
+    width:150px;
+    margin:20px auto;
+}
+
+input[type="file"] {
+    padding: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #555;
+}
